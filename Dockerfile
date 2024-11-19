@@ -1,26 +1,35 @@
-FROM node:18
-ENV CI=true
+# Stage 1: Build stage
+FROM node:18 AS build-stage
 
-# Set the working directory inside the container
-WORKDIR /usr/src/app
+# Set the working directory
+WORKDIR /app
 
 # Copy package.json and package-lock.json
 COPY package*.json ./
 
 # Install dependencies
-RUN npm i --force
+RUN npm install
 
 # Copy the rest of the application code
 COPY . .
 
-ENV NODE_ENV=production
-ENV HOST=0.0.0.0
-# construir aplicacion
+# Build the application
 RUN npm run build
 
-# Set default value for PORT environment variable
+# Stage 2: Production stage
+FROM node:18-alpine AS production-stage
+
+# Set the working directory
+WORKDIR /app
+
+# Copy the build output and installed dependencies from the build stage
+COPY --from=build-stage /app /app
+
+# Install only production dependencies
+RUN npm install --production
+
 # Expose the port the app runs on
-EXPOSE $PORT 8080
+EXPOSE 8080
 
 # Command to run the application
-CMD ["npm", "run", "start:prod"]
+CMD ["npm", "run", "preview"]
