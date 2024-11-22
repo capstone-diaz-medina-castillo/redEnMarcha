@@ -2,6 +2,9 @@
 <template>
   <div class="flex h-screen">
     <div class="flex flex-col w-64 bg-blue-900 text-white transition-all duration-300 ease-in-out">
+      <div class="flex justify-center items-center m-6">
+        <img src="/public/logo.png" alt="">
+      </div>
       <div class="flex flex-col items-center mt-8 mb-6">
         <div
           class="h-20 w-20 rounded-full bg-blue-600 flex items-center justify-center text-2xl font-bold transition-transform duration-300 hover:scale-110">
@@ -54,11 +57,11 @@ const navigationItems = [
   { href: '/panel/miembros-del-equipo', emoji: '', text: 'Miembros del equipo' },
   { href: '/panel/configuraciones', emoji: '', text: 'Configuraciones' },
 ]
-onMounted(()=>{
-  console.log('hola',actualUser.value)
+onMounted(() => {
+  console.log('hola', actualUser.value)
   if (!actualUser.value.id) {
     actualUser.value = JSON.parse(localStorage.getItem('myUser'))
-    console.log('hola',actualUser.value)
+    console.log('hola', actualUser.value)
   }
 })
 const logout = () => {

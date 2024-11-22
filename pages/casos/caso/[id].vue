@@ -135,56 +135,6 @@ const watchHistory = () => { router.push(`/casos/historial/${casoId}`) };
 const addForm = () => {
     router.push(`/casos/responder-formulario/${casoId}`)
 }
-const caso = ref({
-    id: "1",
-    createdAt: "2024-10-18",
-    updateAt: "2024-10-18",
-    forms: [
-        {
-            id: '1',
-            name: 'Formulario Inicial',
-            questions: [
-                { id: 'q1', question: '¿Cómo te sientes hoy?', type: 'text', response: 'Bien, y tu?' },
-                { id: 'q2', question: '¿Qué te gustaría mejorar?', type: 'text', response: 'Mi relación con mi familia' },
-                { id: 'q3', question: '¿Cuál es tu mayor miedo?', type: 'text', response: 'A las arañas' },
-                { id: 'q4', question: '¿Qué te hace feliz?', type: 'text', response: 'Estar con mis amigos' }
-            ]
-        }
-    ],
-    userObject: {
-        nna: {
-            id: "nna1",
-            name: "Juan",
-            second_name: "Pérez",
-            birthDate: "2015-05-12",
-            gender: "Masculino",
-            userType: "NNA",
-            escolaridad: "Primaria",
-        },
-        cuidador: {
-            id: "cuidador1",
-            name: "María",
-            second_name: "González",
-            birthDate: "1985-07-20",
-            gender: "Femenino",
-            userType: "cuidador",
-        },
-        adulto_privado_libertad: {
-            id: "adulto1",
-            name: "Carlos",
-            second_name: "Pérez",
-            birthDate: "1980-03-15",
-            gender: "Masculino",
-            userType: "adulto_privado_libertad",
-            nnaRelationship: "Padre",
-            deprivationDate: "2023-08-12",
-        },
-    },
-    assignedProfessionals: [
-        { id: "user1", name: "Raul Medina", profesion: "psicologo" },
-        { id: "user2", name: "Jhonny Castillo", profesion: "psiquiatra" },
-    ],
-});
 
 definePageMeta({ layout: "main" });
 </script>

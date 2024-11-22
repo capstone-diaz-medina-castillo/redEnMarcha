@@ -2,6 +2,10 @@
     <div class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-500 to-red-500">
         <div
             class="bg-white p-8 rounded-lg shadow-2xl transform hover:scale-105 transition-all duration-300 max-w-md w-full">
+            <div class="w-full flex justify-center items-center p-5">
+                <img src="/public/logo.png" alt="">
+
+            </div>
             <h2 class="text-3xl font-bold text-center text-blue-600 mb-6 animate-pulse">Iniciar Sesión</h2>
             <form @submit.prevent="handleSubmit" class="space-y-6">
                 <div class="space-y-2">
