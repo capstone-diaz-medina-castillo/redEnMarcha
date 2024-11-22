@@ -29,8 +29,8 @@ export const users = ref([
         avatar: 'https://musicland.cl/wp-content/uploads/2020/09/TYLERFLOWER-800x800.jpg',
         role: 'admin',
         profesion: 'admin',
-        email: 'jesu.diazp@duocuc.cl',
-        password: 'jesus261201',
+        email: 'test@duocuc.cl',
+        password: 'testDuoc123',
     }
 ]);
 
@@ -40,7 +40,61 @@ export const casos = ref([
         createdAt: '2024-10-18',
         updateAt: '2024-10-18',
         forms: [
-            { id: 'form1', name: 'Formulario Inicial' }
+            {
+                id: '1',
+                name: 'Formulario de elegibilidad',
+                questions: [
+                    {
+                        id: 'q1',
+                        question: '¿Los niños y niñas saben la situacion de privacion de libertad del adulto significativo?',
+                        type: 'text',
+                        category: 'Información general',
+                        response:''
+                    },
+                    {
+                        id: 'q2',
+                        question: '¿Ha participado o actualmente se encuentra participando en alguno de los programas del Subsistema Seguridades y oportunidades?',
+                        type: 'text',
+                        category: 'Programas sociales',
+                        response:''
+                    },
+                    {
+                        id: 'q3',
+                        question: '¿El/la nna vivía con el/la adulto/a privado/a de libertad antes de su reclusión?',
+                        type: 'text',
+                        category: 'Contexto familiar',
+                        response:''
+                    },
+                    {
+                        id: 'q4',
+                        question: '¿el adulto privado de libertad participaba en el proceso de crianza de los nna brindando los cuidados necesarios de acuerdo a su edad y etapa de desarrollo?',
+                        type: 'text',
+                        category: 'Contexto familiar',
+                        response:''
+                    },
+                    {
+                        id: 'q5',
+                        question: '¿El/la nna se ha visto afectado/a socioeconomicamente por la separacion de el/la adulto/a privado/a de libertad?',
+                        type: 'text',
+                        category: 'Impacto socioeconómico',
+                        response:''
+                    },
+                    {
+                        id: 'q6',
+                        question: '¿El/la nna mantenía o mantiene contacto con el/la adulto/a privado/a de libertad?',
+                        type: 'text',
+                        category: 'Relación actual',
+                        response:''
+                    },
+                    {
+                        id: 'q7',
+                        question: '¿cumple con los requisitos de elegibilidad?',
+                        type: 'text',
+                        category: 'Requisitos de elegibilidad',
+                        response:''
+                    }
+                ]
+            },
         ],
         userObject: [
             { id: 'nna1', name: 'Juan', second_name: 'Pérez', birthDate: '2015-05-12', gender: 'Masculino', userType: 'NNA', escolaridad: 'Primaria' },
@@ -166,14 +220,53 @@ export const profesions = ref([
 export const encuestas = ref([
     {
         id: '1',
-        name: 'Formulario Inicial',
+        name: 'Formulario de elegibilidad',
         questions: [
-            { id: 'q1', question: '¿Cómo te sientes hoy?', type: 'text' },
-            { id: 'q2', question: '¿Qué te gustaría mejorar?', type: 'text' },
-            { id: 'q3', question: '¿Cuál es tu mayor miedo?', type: 'text' },
-            { id: 'q4', question: '¿Qué te hace feliz?', type: 'text' }
+            {
+                id: 'q1',
+                question: '¿Los niños y niñas saben la situacion de privacion de libertad del adulto significativo?',
+                type: 'text',
+                category: 'Información general'
+            },
+            {
+                id: 'q2',
+                question: '¿Ha participado o actualmente se encuentra participando en alguno de los programas del Subsistema Seguridades y oportunidades?',
+                type: 'text',
+                category: 'Programas sociales'
+            },
+            {
+                id: 'q3',
+                question: '¿El/la nna vivía con el/la adulto/a privado/a de libertad antes de su reclusión?',
+                type: 'text',
+                category: 'Contexto familiar'
+            },
+            {
+                id: 'q4',
+                question: '¿el adulto privado de libertad participaba en el proceso de crianza de los nna brindando los cuidados necesarios de acuerdo a su edad y etapa de desarrollo?',
+                type: 'text',
+                category: 'Contexto familiar'
+            },
+            {
+                id: 'q5',
+                question: '¿El/la nna se ha visto afectado/a socioeconomicamente por la separacion de el/la adulto/a privado/a de libertad?',
+                type: 'text',
+                category: 'Impacto socioeconómico'
+            },
+            {
+                id: 'q6',
+                question: '¿El/la nna mantenía o mantiene contacto con el/la adulto/a privado/a de libertad?',
+                type: 'text',
+                category: 'Relación actual'
+            },
+            {
+                id: 'q7',
+                question: '¿cumple con los requisitos de elegibilidad?',
+                type: 'text',
+                category: 'Requisitos de elegibilidad'
+            }
         ]
     },
+    
     {
         id: '2',
         name: 'Evaluación Psicológica',

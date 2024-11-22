@@ -132,7 +132,7 @@ const toggleForm = (index) => {
 };
 
 const watchHistory = () => { router.push(`/casos/historial/${casoId}`) };
-const addForm = () => { 
+const addForm = () => {
     router.push(`/casos/responder-formulario/${casoId}`)
 }
 const caso = ref({
