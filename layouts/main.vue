@@ -54,7 +54,13 @@ const navigationItems = [
   { href: '/panel/miembros-del-equipo', emoji: '', text: 'Miembros del equipo' },
   { href: '/panel/configuraciones', emoji: '', text: 'Configuraciones' },
 ]
-
+onMounted(()=>{
+  console.log('hola',actualUser.value)
+  if (!actualUser.value.id) {
+    actualUser.value = JSON.parse(localStorage.getItem('myUser'))
+    console.log('hola',actualUser.value)
+  }
+})
 const logout = () => {
   actualUser.value = null
   localStorage.removeItem('myUser')
